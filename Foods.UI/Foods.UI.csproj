@@ -79,5 +79,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Foods.Core\Foods.Core.csproj">
+      <Project>{d89a0c48-1080-4dce-b142-63e8ce1945a3}</Project>
+      <Name>Foods.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Foods.Data\Foods.Data.csproj">
+      <Project>{1fb5e0eb-616c-4535-976a-1faf4790f24b}</Project>
+      <Name>Foods.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
