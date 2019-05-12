@@ -8,7 +8,7 @@ using Foods.Data.Models;
 
 namespace Foods.Data
 {
-    public class DataAccess
+    public class CountryDataAccess
     {
         public List<Country> GetCountries()
         {

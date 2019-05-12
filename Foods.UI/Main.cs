@@ -11,6 +11,7 @@ namespace Foods.UI
     public partial class Main : Form
     {
         List<Country> countries = new List<Country>();
+        List<FoodFull> foods = new List<FoodFull>();
         public Main()
         {
             InitializeComponent();
@@ -19,15 +20,25 @@ namespace Foods.UI
         private void Main_Load(object sender, EventArgs e)
         {
             UpdateCountriesListBox();
+            UpdateFoodsListBox();
         }
 
         private void UpdateCountriesListBox()
         {
-            DataAccess db = new DataAccess();
+            CountryDataAccess db = new CountryDataAccess();
             countries = db.GetCountries();
 
             countriesListBox.DataSource = countries;
             countriesListBox.DisplayMember = "WithAbbr";
+        }
+
+        private void UpdateFoodsListBox()
+        {
+            FoodDataAccess db = new FoodDataAccess();
+            foods = db.GetFoods();
+
+            foodsListBox.DataSource = foods;
+            foodsListBox.DisplayMember = "Full";
         }
 
         private void BtnAddCountry_Click(object sender, EventArgs e)
@@ -38,7 +49,7 @@ namespace Foods.UI
             {
                 try
                 {
-                    DataAccess db = new DataAccess();
+                    CountryDataAccess db = new CountryDataAccess();
                     db.AddCountry(txtCountryName.Text, txtCountryAbbr.Text);
                 }
                 catch (Exception ex)
@@ -58,6 +69,11 @@ namespace Foods.UI
             {
                 MessageBox.Show("This field cannot be empty!");
             }
+        }
+
+        private void BtnAddFood_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
