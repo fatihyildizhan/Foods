@@ -46,9 +46,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CountryDataAccess.cs" />
+    <Compile Include="CurrencyDataAccess.cs" />
     <Compile Include="FoodDataAccess.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="Models\Country.cs" />
+    <Compile Include="Models\Currency.cs" />
     <Compile Include="Models\Food.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -42,20 +42,20 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.foodsListBox = new System.Windows.Forms.ListBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.cmbFoodCountry = new System.Windows.Forms.ComboBox();
+            this.cmbFoodCurrency = new System.Windows.Forms.ComboBox();
             this.btnAddFood = new System.Windows.Forms.Button();
             this.txtFoodPrice = new System.Windows.Forms.TextBox();
             this.txtFoodName = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.cmbFoodCurrency = new System.Windows.Forms.ComboBox();
-            this.cmbFoodCountry = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -68,10 +68,10 @@
             // countriesListBox
             // 
             this.countriesListBox.FormattingEnabled = true;
-            this.countriesListBox.ItemHeight = 24;
+            this.countriesListBox.ItemHeight = 32;
             this.countriesListBox.Location = new System.Drawing.Point(6, 38);
             this.countriesListBox.Name = "countriesListBox";
-            this.countriesListBox.Size = new System.Drawing.Size(585, 412);
+            this.countriesListBox.Size = new System.Drawing.Size(585, 388);
             this.countriesListBox.TabIndex = 1;
             // 
             // tabControl1
@@ -90,10 +90,10 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 33);
+            this.tabPage1.Location = new System.Drawing.Point(4, 41);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1195, 741);
+            this.tabPage1.Size = new System.Drawing.Size(1195, 733);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Currencies";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -102,10 +102,10 @@
             // 
             this.tabPage2.Controls.Add(this.groupBox2);
             this.tabPage2.Controls.Add(this.groupBox1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 33);
+            this.tabPage2.Location = new System.Drawing.Point(4, 41);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1195, 741);
+            this.tabPage2.Size = new System.Drawing.Size(1195, 733);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Countries";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -149,14 +149,14 @@
             // 
             this.txtCountryAbbr.Location = new System.Drawing.Point(123, 111);
             this.txtCountryAbbr.Name = "txtCountryAbbr";
-            this.txtCountryAbbr.Size = new System.Drawing.Size(245, 29);
+            this.txtCountryAbbr.Size = new System.Drawing.Size(245, 39);
             this.txtCountryAbbr.TabIndex = 1;
             // 
             // txtCountryName
             // 
             this.txtCountryName.Location = new System.Drawing.Point(123, 61);
             this.txtCountryName.Name = "txtCountryName";
-            this.txtCountryName.Size = new System.Drawing.Size(245, 29);
+            this.txtCountryName.Size = new System.Drawing.Size(245, 39);
             this.txtCountryName.TabIndex = 0;
             // 
             // lblAddCountryResult
@@ -165,7 +165,7 @@
             this.lblAddCountryResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddCountryResult.Location = new System.Drawing.Point(20, 248);
             this.lblAddCountryResult.Name = "lblAddCountryResult";
-            this.lblAddCountryResult.Size = new System.Drawing.Size(15, 20);
+            this.lblAddCountryResult.Size = new System.Drawing.Size(23, 29);
             this.lblAddCountryResult.TabIndex = 3;
             this.lblAddCountryResult.Text = "*";
             this.lblAddCountryResult.Visible = false;
@@ -175,7 +175,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(19, 114);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 24);
+            this.label2.Size = new System.Drawing.Size(83, 32);
             this.label2.TabIndex = 3;
             this.label2.Text = "Abbr:";
             // 
@@ -184,15 +184,15 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(19, 64);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 24);
+            this.label1.Size = new System.Drawing.Size(98, 32);
             this.label1.TabIndex = 3;
             this.label1.Text = "Name:";
             // 
             // tabPage3
             // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 33);
+            this.tabPage3.Location = new System.Drawing.Point(4, 41);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1195, 741);
+            this.tabPage3.Size = new System.Drawing.Size(1195, 733);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Travelers";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -201,30 +201,12 @@
             // 
             this.tabPage4.Controls.Add(this.groupBox3);
             this.tabPage4.Controls.Add(this.groupBox4);
-            this.tabPage4.Location = new System.Drawing.Point(4, 33);
+            this.tabPage4.Location = new System.Drawing.Point(4, 41);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1195, 741);
+            this.tabPage4.Size = new System.Drawing.Size(1195, 733);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Foods";
             this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Location = new System.Drawing.Point(4, 33);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1195, 741);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Votes";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // tabPage6
-            // 
-            this.tabPage6.Location = new System.Drawing.Point(4, 33);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(1195, 741);
-            this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "Logs";
-            this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -239,11 +221,11 @@
             // foodsListBox
             // 
             this.foodsListBox.FormattingEnabled = true;
-            this.foodsListBox.ItemHeight = 24;
+            this.foodsListBox.ItemHeight = 32;
             this.foodsListBox.Location = new System.Drawing.Point(6, 38);
             this.foodsListBox.Name = "foodsListBox";
-            this.foodsListBox.Size = new System.Drawing.Size(585, 412);
-            this.foodsListBox.TabIndex = 1;
+            this.foodsListBox.Size = new System.Drawing.Size(585, 388);
+            this.foodsListBox.TabIndex = 5;
             // 
             // groupBox4
             // 
@@ -263,12 +245,28 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Add";
             // 
+            // cmbFoodCountry
+            // 
+            this.cmbFoodCountry.FormattingEnabled = true;
+            this.cmbFoodCountry.Location = new System.Drawing.Point(123, 216);
+            this.cmbFoodCountry.Name = "cmbFoodCountry";
+            this.cmbFoodCountry.Size = new System.Drawing.Size(245, 40);
+            this.cmbFoodCountry.TabIndex = 3;
+            // 
+            // cmbFoodCurrency
+            // 
+            this.cmbFoodCurrency.FormattingEnabled = true;
+            this.cmbFoodCurrency.Location = new System.Drawing.Point(123, 161);
+            this.cmbFoodCurrency.Name = "cmbFoodCurrency";
+            this.cmbFoodCurrency.Size = new System.Drawing.Size(245, 40);
+            this.cmbFoodCurrency.TabIndex = 2;
+            // 
             // btnAddFood
             // 
             this.btnAddFood.Location = new System.Drawing.Point(123, 273);
             this.btnAddFood.Name = "btnAddFood";
             this.btnAddFood.Size = new System.Drawing.Size(245, 41);
-            this.btnAddFood.TabIndex = 2;
+            this.btnAddFood.TabIndex = 4;
             this.btnAddFood.Text = "Add";
             this.btnAddFood.UseVisualStyleBackColor = true;
             this.btnAddFood.Click += new System.EventHandler(this.BtnAddFood_Click);
@@ -277,22 +275,40 @@
             // 
             this.txtFoodPrice.Location = new System.Drawing.Point(123, 111);
             this.txtFoodPrice.Name = "txtFoodPrice";
-            this.txtFoodPrice.Size = new System.Drawing.Size(245, 29);
+            this.txtFoodPrice.Size = new System.Drawing.Size(245, 39);
             this.txtFoodPrice.TabIndex = 1;
             // 
             // txtFoodName
             // 
             this.txtFoodName.Location = new System.Drawing.Point(123, 61);
             this.txtFoodName.Name = "txtFoodName";
-            this.txtFoodName.Size = new System.Drawing.Size(245, 29);
+            this.txtFoodName.Size = new System.Drawing.Size(245, 39);
             this.txtFoodName.TabIndex = 0;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(19, 219);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(122, 32);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Country:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(19, 164);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(137, 32);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Currency:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(19, 114);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 24);
+            this.label4.Size = new System.Drawing.Size(88, 32);
             this.label4.TabIndex = 3;
             this.label4.Text = "Price:";
             // 
@@ -301,47 +317,31 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(19, 64);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 24);
+            this.label5.Size = new System.Drawing.Size(98, 32);
             this.label5.TabIndex = 3;
             this.label5.Text = "Name:";
             // 
-            // cmbFoodCurrency
+            // tabPage5
             // 
-            this.cmbFoodCurrency.FormattingEnabled = true;
-            this.cmbFoodCurrency.Location = new System.Drawing.Point(123, 161);
-            this.cmbFoodCurrency.Name = "cmbFoodCurrency";
-            this.cmbFoodCurrency.Size = new System.Drawing.Size(245, 32);
-            this.cmbFoodCurrency.TabIndex = 4;
+            this.tabPage5.Location = new System.Drawing.Point(4, 41);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(1195, 733);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Votes";
+            this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // cmbFoodCountry
+            // tabPage6
             // 
-            this.cmbFoodCountry.FormattingEnabled = true;
-            this.cmbFoodCountry.Location = new System.Drawing.Point(123, 216);
-            this.cmbFoodCountry.Name = "cmbFoodCountry";
-            this.cmbFoodCountry.Size = new System.Drawing.Size(245, 32);
-            this.cmbFoodCountry.TabIndex = 4;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 164);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 24);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Currency:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(19, 219);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(80, 24);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Country:";
+            this.tabPage6.Location = new System.Drawing.Point(4, 41);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Size = new System.Drawing.Size(1195, 733);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "Logs";
+            this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1227, 802);
             this.Controls.Add(this.tabControl1);

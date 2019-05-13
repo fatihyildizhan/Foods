@@ -10,8 +10,9 @@ namespace Foods.UI
 {
     public partial class Main : Form
     {
-        List<Country> countries = new List<Country>();
         List<FoodFull> foods = new List<FoodFull>();
+        List<Country> countries = new List<Country>();
+        List<Currency> currencies = new List<Currency>();
         public Main()
         {
             InitializeComponent();
@@ -21,8 +22,11 @@ namespace Foods.UI
         {
             UpdateCountriesListBox();
             UpdateFoodsListBox();
+            UpdateCurrenciesComboBox();
+            UpdateCountriesComboBox();
         }
 
+        // Fetch Country ListBox
         private void UpdateCountriesListBox()
         {
             CountryDataAccess db = new CountryDataAccess();
@@ -32,6 +36,24 @@ namespace Foods.UI
             countriesListBox.DisplayMember = "WithAbbr";
         }
 
+        // Fetch Currency ComboBox
+        private void UpdateCurrenciesComboBox()
+        {
+            CurrencyDataAccess db = new CurrencyDataAccess();
+            currencies = db.GetCurrencies();
+
+            cmbFoodCurrency.DataSource = currencies;
+            cmbFoodCurrency.DisplayMember = "WithSymbol";
+        }
+
+        // Only Bind from current list
+        private void UpdateCountriesComboBox()
+        {
+            cmbFoodCountry.DataSource = countries;
+            cmbFoodCountry.DisplayMember = "WithAbbr";
+        }
+
+        // Fetch Foods ListBox
         private void UpdateFoodsListBox()
         {
             FoodDataAccess db = new FoodDataAccess();
@@ -73,7 +95,14 @@ namespace Foods.UI
 
         private void BtnAddFood_Click(object sender, EventArgs e)
         {
+            Country coun = (Country)cmbFoodCountry.SelectedValue;
+            Currency cur = (Currency)cmbFoodCurrency.SelectedValue;
 
+            FoodDataAccess fd = new FoodDataAccess();
+            fd.AddFood(new Food { Name = txtFoodName.Text, Price = Convert.ToDecimal(txtFoodPrice.Text), CountryId = coun.Id, CurrencyId = cur.Id });
+
+            // Refresh 
+            UpdateFoodsListBox();
         }
     }
 }

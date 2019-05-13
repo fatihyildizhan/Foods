@@ -19,15 +19,12 @@ namespace Foods.Data
             }
         }
 
-        /*
-            public void AddCountry(string name, string abbrv)
+        public void AddFood(Food f)
+        {
+            using (IDbConnection con = new System.Data.SqlClient.SqlConnection(Helper.ConValue("FoodsDB")))
             {
-                using (IDbConnection con = new System.Data.SqlClient.SqlConnection(Helper.ConValue("FoodsDB")))
-                {
-                    Country c = new Country { Name = name, Abbr = abbrv };
-                    con.Execute("dbo.sp_insertCountry @name, @abbr", c);
-                }
+                con.Execute("dbo.sp_insertFood @name, @price, @currencyId, @countryId", f);
             }
-        */
+        }
     }
 }
